@@ -1,48 +1,48 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-color: var(--bg-color);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--bg-image);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: var(--bg-color);
 }
 
 /* Шапка */
 
 .header {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
   height: 100vh;
   min-height: 668px;
-  font-family: var(--main-font-family);
   padding: 10px;
-  position: relative;
+  font-family: var(--main-font-family);
 }
 
 .decorated-zone::before {
   content: '';
   position: absolute;
-  width: 25px;
-  height: 25px;
-  border-bottom: 1px solid white;
-  border-left: 1px solid white;
   bottom: 10px;
   left: 10px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--decoration-color);
+  border-left: 1px solid var(--decoration-color);
 }
 
 .decorated-zone::after {
   content: '';
   position: absolute;
-  width: 25px;
-  height: 25px;
-  border-top: 1px solid white;
-  border-right: 1px solid white;
   top: 10px;
   right: 10px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--decoration-color);
+  border-right: 1px solid var(--decoration-color);
 }
 
 .decoration-item-rec {
@@ -55,19 +55,20 @@
 
 .decoration-item-rec::before {
   content: 'REC';
+  color: var(--decoration-color);
 }
 
 .decoration-item-rec::after {
   content: '';
   position: absolute;
+  top: 8px;
+  left: 42px;
   display: block;
   width: 9px;
   height: 9px;
-  top: 8px;
-  left: 42px;
   border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0 0 4px 2px #fff;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .header__theme-menu {
@@ -81,35 +82,36 @@
 }
 
 .header__theme-menu-button {
-  text-transform: lowercase;
-  line-height: 18px;
-  font-size: var(--main-text-size);
-  background-color: transparent;
-  border: none;
   width: 70px;
   height: 26px;
+  border: none;
+  padding-bottom: 6px;
+  color: var(--nav-color);
+  font-size: var(--main-text-size);
+  line-height: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid #fff;
-}
-
-.header__theme-menu-button:active {
-  border: 1px solid #fff;
+  border: 1px solid var(--nav-color);
 }
 
 .header__title {
-  font-size: var(--h1-size);
-  text-shadow: 4px 4px 0 #fff;
+  color: var(--h1-color);
   font-weight: var(--bold-font);
+  font-size: var(--h1-size);
   line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header__text {
   align-self: center;
+  color: var(--heading-color);
   font-weight: var(--bold-font);
-  line-height: 23.4px;
   font-size: var(--main-text-size);
+  line-height: var(--main-text-lh);
+  background-color: var(--accent-color);
 }
 
 /* Основной контент */
@@ -121,13 +123,14 @@
 }
 
 .content__title {
-  font-size: var(--main-text-size);
   margin-bottom: 20px;
+  color: var(--content-title-color);
+  font-size: var(--main-text-size);
 }
 
-.content__subtitle {
-  font-size: var(--main-text-size);
-  margin-bottom: 20px;
+.content__title_background {
+  color: var(--heading-color);
+  background: var(--accent-color);
 }
 
 .content__section:not(:last-of-type) {
@@ -139,8 +142,10 @@
 }
 
 .content__article-title {
-  font-size: var(--main-text-size);
   margin-bottom: 10px;
+  color: var(--heading-color);
+  font-size: var(--main-text-size);
+  background-color: var(--accent-color);
 }
 
 .content__article-title_normal-weight {
@@ -148,20 +153,21 @@
 }
 
 .content__article-text {
-  line-height: 23.4px;
   margin-top: 10px;
+  color: var(--article-text-color);
+  line-height: var(--main-text-lh);
 }
 
 .content__article-link {
-  text-shadow: 2px 1px 0 #fff;
   text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color);
 }
 
 .content__article-link:hover {
   text-decoration: underline;
-  text-decoration-color: #fff;
+  text-decoration-color: var(--article-text-color);
 }
 
 .content__article-link:focus-visible {
-  border: 1px solid #fff;
+  outline: 1px solid var(--article-text-color);
 }

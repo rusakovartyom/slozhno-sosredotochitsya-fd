@@ -10,13 +10,27 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-image: url(../images/cover-image-light.png);
-  --h1-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --main-font-family: 'IBM Plex mono', monospace;
+  --h1-color: #ffc2e6;
+  --bg-color: #fff1f7;
+  --decoration-color: #353430;
+  --nav-color: #353430;
+  --content-title-color: #353430;
+  --article-title-color: #353430;
+  --article-text-color: #353430;
+  --accent-color: #ff8dcb;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --bg-image: url(../images/cover-image-light.png);
+    --h1-color: #ffc2e6;
+    --bg-color: #fff1f7;
+    --decoration-color: #353430;
+    --nav-color: #353430;
+    --content-title-color: #353430;
+    --article-title-color: #353430;
+    --article-text-color: #353430;
+    --accent-color: #ff8dcb;
   }
 
   .decoration-item-rec {
