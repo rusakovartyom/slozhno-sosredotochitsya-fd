@@ -5,7 +5,9 @@
 :root {
   --bg-image: url(../images/cover-image-dark.png);
   --h1-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --main-text-size: 18px;
   --main-font-family: 'IBM Plex mono', sans-serif;
   --bold-font: bold;
   --normal-font: normal;
+  --accent-color: #ff0070;
 }
