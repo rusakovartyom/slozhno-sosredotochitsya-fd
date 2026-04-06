@@ -14,6 +14,7 @@
   --bg-color: #fff1f7;
   --decoration-color: #353430;
   --nav-color: #353430;
+  --nav-color-hover: rgba(50, 49, 45, 0.4);
   --content-title-color: #353430;
   --article-title-color: #353430;
   --article-text-color: #353430;
@@ -27,6 +28,7 @@
     --bg-color: #fff1f7;
     --decoration-color: #353430;
     --nav-color: #353430;
+    --nav-color-hover: rgba(50, 49, 45, 0.4);
     --content-title-color: #353430;
     --article-title-color: #353430;
     --article-text-color: #353430;

@@ -94,7 +94,17 @@
 }
 
 .header__theme-menu-button:hover {
+  border: 1px solid var(--nav-color-hover);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--nav-color);
+}
+
+.header__theme-menu-button_active {
   border: 1px solid var(--nav-color);
+  pointer-events: none;
 }
 
 .header__title {
